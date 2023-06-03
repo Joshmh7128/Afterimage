@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7931475494750232719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250265726706754677, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590763159317380815, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_Name
+      value: Wall_B White Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383224688721813274, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b6c5c65eb7328d4abe62f8431b56a74, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9860ca066de14a449b009c04c5f107e, type: 3}
