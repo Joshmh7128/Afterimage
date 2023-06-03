@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: cba58007b164c124c910f0db62646292
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -2010813586557451174
+    second: Window_E Frame 1|Cube.080Action
+  - first:
+      74: -6391435893095631547
+    second: Window_E Frame 2|Cube.080Action
+  - first:
+      74: 1747894305428681276
+    second: Window_E Frame 3|Cube.080Action
+  - first:
+      74: -5885622139270537729
+    second: Window_E Frame 4|Cube.080Action
+  - first:
+      74: 5575415599472276120
+    second: Window_E Frame 1|group6|Take 001|BaseLayer
+  - first:
+      74: 5006739095251272534
+    second: Window_E Frame 1|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 5892543612400975518
+    second: Window_E Frame 1.001|group6|Take 001|BaseLayer
+  - first:
+      74: 4875614409664691039
+    second: Window_E Frame 1.001|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 8559391848196272023
+    second: Window_E Frame 1.002|group6|Take 001|BaseLayer
+  - first:
+      74: 8089374461397405179
+    second: Window_E Frame 1.002|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -4515748549732699836
+    second: Window_E Frame 1.003|group6|Take 001|BaseLayer
+  - first:
+      74: 1236199456482930960
+    second: Window_E Frame 1.003|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -532256510330248374
+    second: Window_E Frame 1.004|group6|Take 001|BaseLayer
+  - first:
+      74: -5491382243821846207
+    second: Window_E Frame 1.004|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -99417217044653307
+    second: Window_E Frame 1.005|group6|Take 001|BaseLayer
+  - first:
+      74: -2597081194162317292
+    second: Window_E Frame 1.005|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -1189797054648816476
+    second: Window_E Frame 1.006|group6|Take 001|BaseLayer
+  - first:
+      74: -6229483684159703332
+    second: Window_E Frame 1.006|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -845175298871795043
+    second: Window_E Frame 1.007|group6|Take 001|BaseLayer
+  - first:
+      74: -3061975687592116901
+    second: Window_E Frame 1.007|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -1702219604234598811
+    second: Window_E Frame 1.008|group6|Take 001|BaseLayer
+  - first:
+      74: -1154479474746979865
+    second: Window_E Frame 1.008|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 1741260865843220175
+    second: Window_E Frame 1.009|group6|Take 001|BaseLayer
+  - first:
+      74: -3376739492012175190
+    second: Window_E Frame 1.009|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -1814473710795075926
+    second: Window_E Frame 1.010|group6|Take 001|BaseLayer
+  - first:
+      74: -8623164593943651456
+    second: Window_E Frame 1.010|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 7937487907173428807
+    second: Window_E Frame 1.011|group6|Take 001|BaseLayer
+  - first:
+      74: -55384057534504264
+    second: Window_E Frame 1.011|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -3920934579856039183
+    second: Window_E Frame 1.012|group6|Take 001|BaseLayer
+  - first:
+      74: 8931923686048661534
+    second: Window_E Frame 1.012|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 5053203351584865600
+    second: Window_E Frame 1.013|group6|Take 001|BaseLayer
+  - first:
+      74: -6401790664499545709
+    second: Window_E Frame 1.013|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 2611127509166471559
+    second: Window_E Frame 1.014|group6|Take 001|BaseLayer
+  - first:
+      74: 8646941918589029049
+    second: Window_E Frame 1.014|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 4103786984447534876
+    second: Window_E Frame 1.015|group6|Take 001|BaseLayer
+  - first:
+      74: -1203087727205636765
+    second: Window_E Frame 1.015|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 567490503253752024
+    second: Window_E_Glass_LOD0|group6|Take 001|BaseLayer
+  - first:
+      74: 5107571452797328853
+    second: Window_E_Glass_LOD0|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -6546601762418194490
+    second: Window_E_Glass_LOD1|group6|Take 001|BaseLayer
+  - first:
+      74: -8146212475408115532
+    second: Window_E_Glass_LOD1|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 3252812233688121644
+    second: Window_E_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: -1630594883747334484
+    second: Window_E_Glass|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 8893317517054509675
+    second: Window_E_Frame6_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: -296029320871648682
+    second: Window_E_Frame6_Glass|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 227622614911273571
+    second: Window_E_Frame1_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: 6364215718971171923
+    second: Window_E_Frame1_Glass|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: -7684652445690249527
+    second: Window_E_Frame2_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: 5472748469996113387
+    second: Window_E_Frame2_Glass|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 1861031132452820284
+    second: Window_E_Frame3_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: -6042584436897814341
+    second: Window_E_Frame3_Glass|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 2111554387640210900
+    second: Window_E_Frame4_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: 6565305759311046133
+    second: Window_E_Frame4_Glass|pCylinder3|Take 001|BaseLayer
+  - first:
+      74: 8743226715149911790
+    second: Window_E_Frame5_Glass|group6|Take 001|BaseLayer
+  - first:
+      74: 4460104585178299246
+    second: Window_E_Frame5_Glass|pCylinder3|Take 001|BaseLayer
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: d8c8414a1d4b8d644a5dc71d8bae8488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass_A
+    second: {fileID: 2100000, guid: d8c8414a1d4b8d644a5dc71d8bae8488, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_C
+    second: {fileID: 2100000, guid: edbbe229b0a4203449dc39a8a9c686ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster_A
+    second: {fileID: 2100000, guid: 593d4a3efd26bd24b980865aac8d488e, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
