@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3382460628318875493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4943206555358923373, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf5196a2df8712a459f4c16c4f8081e2, type: 2}
+    - target: {fileID: 6025699658564160433, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6112194997158867202, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400817134889898251, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400817134889898251, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888590275814534072, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_Name
+      value: Doorway_A Beige Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424997386437136523, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800572534280833585, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19599915
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800572534280833585, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.8947992
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84b13ffd06a14fe469f10d6b9d36fe76, type: 3}
