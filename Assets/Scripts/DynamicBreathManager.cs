@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DynamicBreathManager : MonoBehaviour
 {
-    float breathSpeed, desiredBreathSpeed, breathLerpSpeed; // how fast are we breathing? this variable is set by MoodChange()
+    [SerializeField] float breathSpeed, desiredBreathSpeed, breathLerpSpeed, breathVariance; // how fast are we breathing? this variable is set by MoodChange()
     [SerializeField] List<AudioClip> breathInSounds, breathOutSounds;
     AudioClip lastInSound, lastOutSound; // what were our last in and our breath sounds
     [SerializeField] AudioSource breathSource;
@@ -17,25 +17,26 @@ public class DynamicBreathManager : MonoBehaviour
         normal, scared, intense
     }
 
-    public BreathMood breathMood  // our current breathmood
-    {
-        get { return breathMood; }
-        set { breathMood = value; MoodChange(); } // when we change our mood, set the value, then run the function to check our mood
-    }
-
+    public BreathMood breathMood; // our current breathmood
+    BreathMood currentMood; // our mood on the last frame
     private void Start()
     {
+        MoodChange(BreathMood.normal);
         StartCoroutine(BreathingCycle());
     }
 
     // call when we change our mood
-    void MoodChange()
+    void MoodChange(BreathMood desiredMood)
     {
+        currentMood = desiredMood;
+        breathMood = desiredMood;
         desiredBreathSpeed = breathSpeeds[(int)breathMood];
     }
 
     private void FixedUpdate()
     {
+        if (breathMood != currentMood) MoodChange(breathMood);
+
         // lerp our breathspeed to our desired breath speed
         breathSpeed = Mathf.Lerp(desiredBreathSpeed, breathSpeed, breathLerpSpeed * Time.fixedDeltaTime);
     }
@@ -44,7 +45,7 @@ public class DynamicBreathManager : MonoBehaviour
     IEnumerator BreathingCycle()
     {
         // calculate and wait our breathspeed
-        yield return new WaitForSecondsRealtime(breathSpeed / 1);
+        yield return new WaitForSecondsRealtime((breathSpeed / 1) + Random.Range(-breathVariance, breathVariance));
         // what was our last breath?
         lastIn = !lastIn;
         // play a sound
@@ -60,12 +61,10 @@ public class DynamicBreathManager : MonoBehaviour
         AudioClip lastBreath = null;
 
         if (lastBreathIn) // if our last breath was in...
-            while (lastBreath == lastInSound) // make sure we aren't using the last sound we made...
-                lastBreath = breathInSounds[Random.Range(0, breathInSounds.Count)]; // pick a random sound...
+            lastBreath = breathInSounds[Random.Range(0, breathInSounds.Count)]; // pick a random sound...
 
         if (!lastBreathIn) // if our last breath was out...
-            while (lastBreath == lastInSound) // make sure we aren't using the last sound we made...
-                lastBreath = breathOutSounds[Random.Range(0, breathOutSounds.Count)]; // pick a random sound...
+            lastBreath = breathOutSounds[Random.Range(0, breathOutSounds.Count)]; // pick a random sound...
 
         // assign audio clip and play the sound
         breathSource.clip = lastBreath;

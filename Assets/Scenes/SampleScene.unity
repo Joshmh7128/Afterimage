@@ -900,6 +900,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfff16575f8e3e84ba16b46fc7eedca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breathSpeed: 0
+  desiredBreathSpeed: 0
+  breathLerpSpeed: 0.2
+  breathVariance: 0.05
   breathInSounds:
   - {fileID: 8300000, guid: 49c2de63748b3b540ad10eff27e1cb68, type: 3}
   - {fileID: 8300000, guid: bb0c1124313497b478dabe05d956815f, type: 3}
@@ -910,9 +914,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fe0ccef35270bbf4d9a79851e7dc675c, type: 3}
   breathSource: {fileID: 316551228}
   breathSpeeds:
+  - 1.45
   - 1
-  - 2
-  - 3
+  - 0.6
+  breathMood: 0
 --- !u!1 &378242356
 GameObject:
   m_ObjectHideFlags: 19
@@ -3118,7 +3123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1397413737}
   - component: {fileID: 1397413740}
-  - component: {fileID: 1397413739}
   - component: {fileID: 1397413738}
   m_Layer: 0
   m_Name: Dummy Camera
@@ -3271,14 +3275,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!81 &1397413739
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1397413736}
-  m_Enabled: 1
 --- !u!20 &1397413740
 Camera:
   m_ObjectHideFlags: 0
