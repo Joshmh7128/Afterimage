@@ -8,6 +8,7 @@ public class DynamicBreathManager : MonoBehaviour
     [SerializeField] List<AudioClip> breathInSounds, breathOutSounds;
     AudioClip lastInSound, lastOutSound; // what were our last in and our breath sounds
     [SerializeField] AudioSource breathSource;
+    [Header("Breathing in Breaths per Second")]
     [SerializeField] List<float> breathSpeeds;
     bool lastIn;
     [SerializeField] public enum BreathMood
@@ -48,6 +49,8 @@ public class DynamicBreathManager : MonoBehaviour
         lastIn = !lastIn;
         // play a sound
         PlayBreath(lastIn);
+        // continue
+        StartCoroutine(BreathingCycle());
     }
 
     // play a breath out sound
