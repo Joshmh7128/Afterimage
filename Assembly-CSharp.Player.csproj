@@ -65,6 +65,8 @@
     <Compile Include="Assets\Kowloon Walled City\Scripts\LightLayerChanger.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\RandomSpawner.cs" />
+    <Compile Include="Assets\Scripts\VisibleSlider.cs" />
+    <Compile Include="Assets\Scripts\DynamicBreathManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

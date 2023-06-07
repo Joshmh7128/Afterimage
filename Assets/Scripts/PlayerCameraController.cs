@@ -10,6 +10,13 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] float normalFov, zoomFov, fovLerpInSpeed, fovLerpOutSpeed;
     Camera cam;
 
+    public static PlayerCameraController instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         cam = GetComponent<Camera>();
