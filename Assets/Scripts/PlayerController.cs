@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField] float aimSensitivity;
     [SerializeField] float minYAngle, maxYAngle;
-    float currentSensitivity, yRotate, xRotate;
+    [SerializeField] float currentSensitivity, yRotate, xRotate, maxRot;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
         // declare our motion
         float pAxisV = Input.GetAxisRaw("Vertical");
         float pAxisH = Input.GetAxisRaw("Horizontal");
-        moveV = playerHead.forward * pAxisV;
-        moveH = playerHead.right * pAxisH;
+        moveV = (playerHead.forward * pAxisV).normalized;
+        moveH = (playerHead.right * pAxisH).normalized;
 
         RaycastHit groundedHit;
         Physics.Raycast(transform.position, Vector3.down, out groundedHit, characterController.height/2, Physics.AllLayers, QueryTriggerInteraction.Ignore);
@@ -68,11 +68,20 @@ public class PlayerController : MonoBehaviour
         // our camera control
         currentSensitivity = aimSensitivity;
         // run math to rotate the head of the player as we move the mouse
-        yRotate += Input.GetAxis("Mouse Y") * -currentSensitivity * Time.fixedDeltaTime;
+        float addY = Input.GetAxis("Mouse Y") * -currentSensitivity * Time.fixedDeltaTime;
+        if (addY > maxRot) yRotate += maxRot;
+        else if (addY < -maxRot) yRotate -= maxRot;
+        else if (addY > -maxRot && addY < maxRot) yRotate += addY;
+
         // clamp the rotation so we don't go around ourselves
         yRotate = Mathf.Clamp(yRotate, minYAngle, maxYAngle);
         // calculate our X rotation
-        xRotate += Input.GetAxis("Mouse X") * currentSensitivity * Time.fixedDeltaTime;
+        float addX = Input.GetAxis("Mouse X") * currentSensitivity * Time.fixedDeltaTime;
+        // make sure we dont surpass the highest rot
+        if (addX > maxRot) xRotate += maxRot;
+        else if (addX < -maxRot) xRotate -= maxRot;
+        else if (addX > -maxRot && addX < maxRot) xRotate += addX;
+
         // add in our rotate mods if we have any
         float finalxRotate = xRotate;
         float finalyRotate = yRotate;
