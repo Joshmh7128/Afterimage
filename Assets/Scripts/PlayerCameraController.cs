@@ -8,7 +8,7 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] float lerpSpeed, slerpSpeed; // our movement speed params
     [SerializeField] Transform head; // the head we move to
     [SerializeField] float normalFov, zoomFov, fovLerpInSpeed, fovLerpOutSpeed;
-    Camera cam;
+    Camera cam; RaycastHit hit;
 
     public static PlayerCameraController instance;
 
@@ -26,6 +26,7 @@ public class PlayerCameraController : MonoBehaviour
     {
         TransformUpdate();
         ProcessFov();
+        ProcessPuzzleInput();
     }
 
     void TransformUpdate()
@@ -45,6 +46,18 @@ public class PlayerCameraController : MonoBehaviour
         else
         {
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, normalFov, fovLerpOutSpeed * Time.fixedDeltaTime);
+        }
+    }
+
+    void ProcessPuzzleInput()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 5f, Physics.AllLayers, QueryTriggerInteraction.Collide))
+        {
+            if (hit.transform.gameObject.GetComponent<PuzzleElement>() != null)
+            {
+                if (Input.GetMouseButtonDown(0))
+                    hit.transform.gameObject.GetComponent<PuzzleElement>().Interact();
+            }
         }
     }
 }

@@ -529,9 +529,6 @@ MonoBehaviour:
   - {fileID: -896280650352489176}
   - {fileID: 9181658340052986058}
   - {fileID: -1958271117609245545}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 537433896493696470}
   - {fileID: -8999575162992459574}
 --- !u!114 &537433896493696470
@@ -758,25 +755,25 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   meteringMode:
     m_OverrideState: 0
-    m_Value: 2
+    m_Value: 0
   luminanceSource:
     m_OverrideState: 0
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 3.7
+    m_Value: 4.467046
   compensation:
     m_OverrideState: 0
     m_Value: 0
   limitMin:
     m_OverrideState: 0
-    m_Value: -1
+    m_Value: -5
   limitMax:
-    m_OverrideState: 0
-    m_Value: 14
+    m_OverrideState: 1
+    m_Value: 4.943181
   curveMap:
     m_OverrideState: 0
     m_Value:

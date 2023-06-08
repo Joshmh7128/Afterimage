@@ -5,27 +5,35 @@ using UnityEngine;
 public class PuzzleElement_Activator : PuzzleElement
 {
     // what objects can we target?
-    [SerializeField] GameObject tObj;
-    [SerializeField] Renderer tRend;
-    [SerializeField] Light tLight;
+    [SerializeField] List<GameObject> tObj;
+    [SerializeField] bool localToggle; 
 
     // when we are activated, set our state
     internal override void Activate(States signal)
     {
-        if (signal == States.on) try
-            {
-                tObj.SetActive(true);
-                tRend.enabled = true;
-                tLight.enabled = true;
-            }
-            catch { }
-        else if (signal == States.off) try
-            {
-                tObj.SetActive(false);
-                tRend.enabled = false;
-                tLight.enabled = false;
-            }
-            catch { }
+        if (!localToggle)
+        {
+            if (signal == States.on) try
+                {
+                    foreach (GameObject go in tObj)
+                        go.SetActive(true);
+                }
+                catch { }
+            else if (signal == States.off) try
+                {
+                    foreach (GameObject go in tObj)
+                        go.SetActive(false);
+                }
+                catch { }
+        }
 
+        if (localToggle)
+            Activate();
+    }
+
+    internal override void Activate()
+    {
+        foreach (GameObject go in tObj)
+            go.SetActive(!go.activeSelf);
     }
 }
