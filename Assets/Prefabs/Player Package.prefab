@@ -413,7 +413,7 @@ MonoBehaviour:
   breathSpeeds:
   - 1.45
   - 1
-  - 0.6
+  - 0.85
   breathMood: 0
 --- !u!82 &2587135969421480890
 AudioSource:
