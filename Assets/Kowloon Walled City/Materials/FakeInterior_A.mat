@@ -326,7 +326,7 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissiveColorDay: {r: 6135.9688, g: 6135.9688, b: 6135.9688, a: 0}
+    - _EmissiveColorDay: {r: 38.93714, g: 38.93714, b: 38.93714, a: 0}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorNight: {r: 47.937256, g: 27.858824, b: 12.54902, a: 0}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
