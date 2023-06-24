@@ -10,7 +10,7 @@ public abstract class PuzzleElement : MonoBehaviour
     // activate is triggered when another puzzle element is interacted with
     internal virtual void Activate() { } // does this puzzle element have an activated state?
     internal virtual void Activate(States signal) { } // does this puzzle element have an activated state?
-    internal virtual void OnHover() { isHovering = true; hoverTime = 1f; }
+    internal virtual void OnHover() { isHovering = true; hoverTime = 1; }
 
     public bool isHovering; // is the player hovering on us right now?
     public float hoverTime; // our hovertime
@@ -33,7 +33,7 @@ public abstract class PuzzleElement : MonoBehaviour
     void ProcessHover()
     {
         // our hover time
-        if (hoverTime > 0) hoverTime -= Time.fixedDeltaTime*2;
+        if (hoverTime > 0) hoverTime -= Time.fixedDeltaTime;
         // if we lose hover
         if (hoverTime <= 0) isHovering = false;
         // if we are hovering turn on the full highlight

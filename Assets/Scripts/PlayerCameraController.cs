@@ -103,13 +103,19 @@ public class PlayerCameraController : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<PuzzleElement>().OnHover();
 
+                UIHandler.instance.Request(UIHandler.RequestType.lmb);
+
                 // if we are hovering and 
                 if (Input.GetMouseButtonDown(0))
                 {
                     hit.transform.gameObject.GetComponent<PuzzleElement>().Interact();
                 }
             }
+            else { UIHandler.instance.Request(UIHandler.RequestType.none); }
         }
+
+
+
     }
 
     
