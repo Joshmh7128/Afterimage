@@ -380,10 +380,10 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 3.48
+    m_Value: 0
   multiplier:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 14.26
   upperHemisphereLuxValue:
     m_OverrideState: 1
     m_Value: 1.8942586
@@ -391,7 +391,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.36601055, z: 0.20283054}
   desiredLuxValue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 20000
   updateMode:
     m_OverrideState: 0
@@ -515,12 +515,6 @@ MonoBehaviour:
   m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 8746927691567276747}
-  - {fileID: -7453165486605910898}
-  - {fileID: 2498854676320013549}
-  - {fileID: -6851464799545600145}
-  - {fileID: -6314403457287324704}
-  - {fileID: -3620740614522914063}
   - {fileID: 8644908073685132699}
   - {fileID: -4708110574581397936}
   - {fileID: -4910018570803717989}
@@ -773,7 +767,7 @@ MonoBehaviour:
     m_Value: -5
   limitMax:
     m_OverrideState: 1
-    m_Value: 4.943181
+    m_Value: 2.5563252
   curveMap:
     m_OverrideState: 0
     m_Value:

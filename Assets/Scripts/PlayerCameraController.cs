@@ -10,17 +10,36 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] float normalFov, zoomFov, fovLerpInSpeed, fovLerpOutSpeed;
     Camera cam; RaycastHit hit;
 
+    [SerializeField] AudioSource camZoomNoise; // our zoome noise source
+    [SerializeField] AudioClip zoomIn, zoomOut, clickIn, clickOut; // our camera zoom noises
+    bool lastClicked; // did we last click?
+
+    float originalVol; // what was our original volume?
+
     public static PlayerCameraController instance;
 
     private void Awake()
     {
+        // stop the audio source from playing audio on the camera on start
+        originalVol = camZoomNoise.volume;
+        camZoomNoise.volume = 0;
         instance = this;
     }
 
     private void Start()
     {
         cam = GetComponent<Camera>();
+        // invoke the late start
+        Invoke("LateStart",0.1f);
     }
+
+    // late start runs 0.1 seconds after start
+    void LateStart()
+    {
+        // do this in the late start so we dont have the audio source play on start
+        camZoomNoise.volume = originalVol;
+    }
+
 
     private void Update()
     {
@@ -41,12 +60,41 @@ public class PlayerCameraController : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, zoomFov, fovLerpInSpeed * Time.fixedDeltaTime);
+            cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, zoomFov, fovLerpInSpeed * Time.fixedDeltaTime);
         }
         else
         {
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, normalFov, fovLerpOutSpeed * Time.fixedDeltaTime);
+            cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, normalFov, fovLerpOutSpeed * Time.fixedDeltaTime);
         }
+
+        if (cam.fieldOfView == zoomFov && !lastClicked)
+        {
+            lastClicked = true;
+            camZoomNoise.Stop();
+            camZoomNoise.PlayOneShot(clickIn);
+        }
+
+        if (cam.fieldOfView == normalFov && !lastClicked)
+        {
+            lastClicked = true;
+            camZoomNoise.Stop();
+            camZoomNoise.PlayOneShot(clickOut);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            lastClicked = false;
+            camZoomNoise.clip = zoomIn; 
+            camZoomNoise.Play();
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            lastClicked = false;
+            camZoomNoise.clip = zoomOut; 
+            camZoomNoise.Play();
+        }
+
     }
 
     void ProcessPuzzleInput()

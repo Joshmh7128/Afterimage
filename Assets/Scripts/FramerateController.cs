@@ -6,8 +6,9 @@ public class FramerateController : MonoBehaviour
 {
     [SerializeField] int targetFrameRate; // our target frame rate
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = targetFrameRate;
     }
 }
