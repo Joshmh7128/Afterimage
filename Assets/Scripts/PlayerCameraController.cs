@@ -40,7 +40,6 @@ public class PlayerCameraController : MonoBehaviour
         camZoomNoise.volume = originalVol;
     }
 
-
     private void Update()
     {
         TransformUpdate();
@@ -94,18 +93,24 @@ public class PlayerCameraController : MonoBehaviour
             camZoomNoise.clip = zoomOut; 
             camZoomNoise.Play();
         }
-
     }
 
     void ProcessPuzzleInput()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 5f, Physics.AllLayers, QueryTriggerInteraction.Collide))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 1f, Physics.AllLayers, QueryTriggerInteraction.Collide))
         {
             if (hit.transform.gameObject.GetComponent<PuzzleElement>() != null)
             {
+                hit.transform.gameObject.GetComponent<PuzzleElement>().OnHover();
+
+                // if we are hovering and 
                 if (Input.GetMouseButtonDown(0))
+                {
                     hit.transform.gameObject.GetComponent<PuzzleElement>().Interact();
+                }
             }
         }
     }
+
+    
 }

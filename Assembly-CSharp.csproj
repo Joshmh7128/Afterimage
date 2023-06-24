@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Button.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\RandomSpawner.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Activator.cs" />
+    <Compile Include="Assets\Scripts\HoverTex.cs" />
+    <Compile Include="Assets\Scripts\InteractableHighlight.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Sound.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement.cs" />
     <Compile Include="Assets\Scripts\VisibleSlider.cs" />
