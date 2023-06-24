@@ -401,6 +401,9 @@ MonoBehaviour:
   desiredBreathSpeed: 0
   breathLerpSpeed: 0.2
   breathVariance: 0.05
+  returnToNormSpeed: 1
+  returnCount: 15
+  returnCountMax: 15
   breathInSounds:
   - {fileID: 8300000, guid: 49c2de63748b3b540ad10eff27e1cb68, type: 3}
   - {fileID: 8300000, guid: bb0c1124313497b478dabe05d956815f, type: 3}
@@ -412,8 +415,8 @@ MonoBehaviour:
   breathSource: {fileID: 2587135969421480890}
   breathSpeeds:
   - 1.45
+  - 1.15
   - 1
-  - 0.85
   breathMood: 0
 --- !u!82 &2587135969421480890
 AudioSource:

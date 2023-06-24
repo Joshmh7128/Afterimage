@@ -10,6 +10,7 @@ public class VisibleSlider : MonoBehaviour
     [SerializeField] Vector3 targetPos; // the position we want to move to
     PlayerCameraController camController; // our camera controller
     [SerializeField] Renderer rend; // our renderer
+    [SerializeField] AudioSource audioSource; // our audio source
 
     private void Start()
     {
@@ -38,6 +39,12 @@ public class VisibleSlider : MonoBehaviour
             {
                 Debug.Log("seen");
                 seen = true;
+                // when we are seen apply faster breathing
+                DynamicBreathManager.instance.MoodChange(DynamicBreathManager.BreathMood.scared);
+                // when we are seen play our audio
+                if (audioSource)
+                    if (!audioSource.isPlaying)
+                        audioSource.Play();
             }
         }
     }
