@@ -33,11 +33,8 @@ public class VisibleSlider : MonoBehaviour
         // check to see if this entity can see us
         if (!seen && rend.isVisible)
         {
-            Debug.Log("seeable");
-
             if (!Physics.Linecast(transform.position, camController.transform.position, out hit, Physics.AllLayers, QueryTriggerInteraction.Collide))
             {
-                Debug.Log("seen");
                 seen = true;
                 // when we are seen apply faster breathing
                 DynamicBreathManager.instance.MoodChange(DynamicBreathManager.BreathMood.scared);

@@ -6,7 +6,7 @@ public class InteractableHighlight : MonoBehaviour
 {
     Renderer rend;
 
-    [SerializeField] float speed = 3;
+    [SerializeField] float speed = 0.5f;
 
     private void Start()
     {

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    public void Awake()
+    {
+        instance = this;
+    }
+
     // script handles movement of the player
     [SerializeField] Vector3 moveH, moveV, move;
     [SerializeField] Transform playerHead;
