@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\HoverTex.cs" />
     <Compile Include="Assets\Scripts\InteractableHighlight.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Sound.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_ToggleObject.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement.cs" />
     <Compile Include="Assets\Scripts\VisibleSlider.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Transform.cs" />

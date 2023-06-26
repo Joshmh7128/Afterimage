@@ -10,7 +10,7 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] float normalFov, zoomFov, fovLerpInSpeed, fovLerpOutSpeed;
     Camera cam; RaycastHit hit;
 
-    [SerializeField] AudioSource camZoomNoise, flashlightNoise; // our zoome noise source
+    public AudioSource camZoomNoise, flashlightNoise, vhsStaticNoise; // our zoome noise source
     [SerializeField] AudioClip zoomIn, zoomOut, clickIn, clickOut, flashlightOn, flashlightOff; // our noises
     bool lastClicked; // did we last click?
 
