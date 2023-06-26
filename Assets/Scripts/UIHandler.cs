@@ -49,8 +49,8 @@ public class UIHandler : MonoBehaviour
             Request(RequestType.none);
 
         // update our time
-        DateTime now = DateTime.Now;
-        timeText.text = (now - startTime).ToString();
+        
+        timeText.text = (DateTime.Now - startTime).Hours.ToString("D2") + " : " + (DateTime.Now - startTime).Minutes.ToString("D2") + " : " + (DateTime.Now - startTime).Seconds.ToString("D2");
 
         // our page count
         photoText.text = "Photos Recovered: " + photoCount.ToString() + " / " + "3";
