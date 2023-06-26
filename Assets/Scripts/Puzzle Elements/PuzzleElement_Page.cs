@@ -9,6 +9,7 @@ public class PuzzleElement_Page : PuzzleElement
 
     AudioSource audioSource; // our audio source
     bool canMove, taken; // can we move?
+    [SerializeField] PuzzleElement additionalInteract; // a puzzle element we activate when the paper runs
 
     private void Start()
     {
@@ -23,11 +24,13 @@ public class PuzzleElement_Page : PuzzleElement
         {
             taken = true;
             UIHandler.instance.photoCount++;
+            if (additionalInteract)
+                additionalInteract.Interact();
         }
         canMove = true;
         audioSource.Play(); // play audio
         // destroy the page once we have it
-        Invoke("ManualDestroy", 1f);
+        Invoke("ManualDestroy", 6f);
 
     }
 

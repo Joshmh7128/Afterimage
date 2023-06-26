@@ -10,7 +10,7 @@ public class UIHandler : MonoBehaviour
     public static UIHandler instance;
 
     [SerializeField] List<GameObject> uiElements = new List<GameObject>(); // our list of UI elements we want to manipulate
-    [SerializeField] TextMeshProUGUI timeText, photoText;
+    [SerializeField] TextMeshProUGUI timeText, photoText, messageText;
     DateTime startTime;
 
     float requestCount;
@@ -53,6 +53,11 @@ public class UIHandler : MonoBehaviour
         timeText.text = (DateTime.Now - startTime).Hours.ToString("D2") + " : " + (DateTime.Now - startTime).Minutes.ToString("D2") + " : " + (DateTime.Now - startTime).Seconds.ToString("D2");
 
         // our page count
-        photoText.text = "Photos Recovered: " + photoCount.ToString() + " / " + "3";
+        photoText.text = "Photos Recovered: " + photoCount.ToString() + " / " + "2";
+    }
+
+    public void DisplayMessage(string message)
+    {
+        messageText.text = message;
     }
 }

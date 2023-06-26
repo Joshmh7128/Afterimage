@@ -60,22 +60,24 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerCameraController.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\WindowRandomizer.cs" />
-    <Compile Include="Assets\Scripts\QuantumSlider.cs" />
+    <Compile Include="Assets\Scripts\Ghost Sliders\TriggerSlider.cs" />
     <Compile Include="Assets\Scripts\TransformSway.cs" />
     <Compile Include="Assets\Scripts\FramerateController.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\LightLayerChanger.cs" />
+    <Compile Include="Assets\Scripts\Ghost Sliders\QuantumSlider.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\AudioNaturalizer.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Button.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\RandomSpawner.cs" />
+    <Compile Include="Assets\Scripts\SendUIMessage.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Activator.cs" />
     <Compile Include="Assets\Scripts\UIHandler.cs" />
     <Compile Include="Assets\Scripts\HoverTex.cs" />
     <Compile Include="Assets\Scripts\InteractableHighlight.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Sound.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_ToggleObject.cs" />
+    <Compile Include="Assets\Scripts\Ghost Sliders\VisibleSlider.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement.cs" />
-    <Compile Include="Assets\Scripts\VisibleSlider.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Transform.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Switch.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Page.cs" />
