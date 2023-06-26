@@ -257,7 +257,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439913920146343920}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -1474,6 +1474,7 @@ GameObject:
   - component: {fileID: 1872019219996079366}
   - component: {fileID: 5927243332277169968}
   - component: {fileID: 3438837054565347693}
+  - component: {fileID: 8155919217782860565}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1710,10 +1711,14 @@ MonoBehaviour:
   fovLerpInSpeed: 80
   fovLerpOutSpeed: 80
   camZoomNoise: {fileID: 5927243332277169968}
+  flashlightNoise: {fileID: 8155919217782860565}
   zoomIn: {fileID: 8300000, guid: 0c7b7b870539c1946897334cb85ad6d1, type: 3}
   zoomOut: {fileID: 8300000, guid: d7faf4650cbf60d449ef7b538e240a48, type: 3}
   clickIn: {fileID: 8300000, guid: 3365a6d38f5864841afab6d62a537985, type: 3}
   clickOut: {fileID: 8300000, guid: 1bb75fd925ed81b4aabb84b78fcc6599, type: 3}
+  flashlightOn: {fileID: 8300000, guid: 8b02f2b99c0b3194ebedf45e45536cb3, type: 3}
+  flashlightOff: {fileID: 8300000, guid: 03263e0ad0996dc498d6e9e2ccd9af43, type: 3}
+  flashlightObj: {fileID: 6376474908650999773}
 --- !u!114 &3404956260346967304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1867,6 +1872,102 @@ MonoBehaviour:
   timeText: {fileID: 4099976661331843404}
   photoText: {fileID: 3896280402755762160}
   photoCount: 0
+--- !u!82 &8155919217782860565
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971182004897603080}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5198687884872994785
 GameObject:
   m_ObjectHideFlags: 0

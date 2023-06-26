@@ -10,9 +10,11 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] float normalFov, zoomFov, fovLerpInSpeed, fovLerpOutSpeed;
     Camera cam; RaycastHit hit;
 
-    [SerializeField] AudioSource camZoomNoise; // our zoome noise source
-    [SerializeField] AudioClip zoomIn, zoomOut, clickIn, clickOut; // our camera zoom noises
+    [SerializeField] AudioSource camZoomNoise, flashlightNoise; // our zoome noise source
+    [SerializeField] AudioClip zoomIn, zoomOut, clickIn, clickOut, flashlightOn, flashlightOff; // our noises
     bool lastClicked; // did we last click?
+
+    [SerializeField] Light flashlightObj;
 
     float originalVol; // what was our original volume?
 
@@ -45,6 +47,7 @@ public class PlayerCameraController : MonoBehaviour
         TransformUpdate();
         ProcessFov();
         ProcessPuzzleInput();
+        ProcessFlashlightInput();
     }
 
     void TransformUpdate()
@@ -118,5 +121,14 @@ public class PlayerCameraController : MonoBehaviour
 
     }
 
+    void ProcessFlashlightInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            flashlightObj.enabled = (!flashlightObj.enabled);
+            AudioClip clip = flashlightObj.enabled ? flashlightOn : flashlightOff;
+            flashlightNoise.PlayOneShot(clip);
+        }
+    }
     
 }
