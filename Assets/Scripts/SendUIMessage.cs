@@ -16,7 +16,7 @@ public class SendUIMessage : MonoBehaviour
 
     void SendMessage()
     {
-        UIHandler.instance.DisplayMessage(message);
+        UIHandler.instance.DisplayMessage(message, waitTime + endTime);
     }
 
     void SendNull()

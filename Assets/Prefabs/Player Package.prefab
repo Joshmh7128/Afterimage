@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 3585246724796041720}
   - component: {fileID: 6376474908650999773}
   - component: {fileID: 214189795100277717}
+  - component: {fileID: 5157728067091244587}
   m_Layer: 0
   m_Name: Flash Light
   m_TagString: Untagged
@@ -242,12 +243,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439913920146343920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.30000007, y: 0.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8024407576499267997}
+  m_Father: {fileID: 5060465342098615554}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &6376474908650999773
@@ -310,7 +311,7 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
+  m_ShadowRadius: 0.16
   m_ShadowAngle: 0
 --- !u!114 &214189795100277717
 MonoBehaviour:
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_ShapeWidth: 0.5
   m_ShapeHeight: 0.5
   m_AspectRatio: 1
-  m_ShapeRadius: 0.025
+  m_ShapeRadius: 0.16
   m_SoftnessScale: 1
   m_UseCustomSpotLightShadowCone: 0
   m_CustomSpotLightShadowCone: 30
@@ -434,6 +435,19 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!114 &5157728067091244587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439913920146343920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a7f7d4a5fa57c4ba181d1bb65f4661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpSpeed: 10
 --- !u!1 &2287018823432323357
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,9 +850,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9029f51276c134f4fb8acaf00db65c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0.1
+  range: 0.15
   maxTime: 0.5
-  lerpSpeed: 0.2
+  lerpSpeed: 0.3
 --- !u!1 &3270325839335025201
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +907,6 @@ MonoBehaviour:
   returnCountMax: 15
   breathInSounds:
   - {fileID: 8300000, guid: 49c2de63748b3b540ad10eff27e1cb68, type: 3}
-  - {fileID: 8300000, guid: bb0c1124313497b478dabe05d956815f, type: 3}
   - {fileID: 8300000, guid: a99086bec8c6cc346acbb8d0e50181d9, type: 3}
   breathOutSounds:
   - {fileID: 8300000, guid: 7ca1ed61bb108b34d92dd06bdeb822e2, type: 3}
@@ -1499,7 +1512,6 @@ Transform:
   - {fileID: 4084695734482155491}
   - {fileID: 1545657197516434497}
   - {fileID: 4228028499515538058}
-  - {fileID: 3585246724796041720}
   m_Father: {fileID: 5060465342098615554}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2204,6 +2216,7 @@ Transform:
   - {fileID: 8041614023623390821}
   - {fileID: 8024407576499267997}
   - {fileID: 6934032705787752031}
+  - {fileID: 3585246724796041720}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     // script handles movement of the player
     [SerializeField] Vector3 moveH, moveV, move;
-    [SerializeField] Transform playerHead;
+    public Transform playerHead;
     [SerializeField] CharacterController characterController; // our character controller
     [SerializeField] float moveSpeed, gravity, jumpVelocity, playerJumpVelocity; // set in editor for controlling
     float gravityValue, verticalVelocity; // hidden because is calculated

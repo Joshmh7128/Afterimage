@@ -6,7 +6,7 @@ public class TriggerSlider : MonoBehaviour
 {
     [SerializeField] float watchTime; // how long can we be seen for before moving?
     [SerializeField] float speed; // how fast do we move
-    RaycastHit hit; bool seen; // have we been hit? have we been seen?
+    RaycastHit hit; bool seen, played; // have we been hit? have we been seen?
     [SerializeField] Vector3 targetPos; // the position we want to move to
     PlayerCameraController camController; // our camera controller
     [SerializeField] Renderer rend; // our renderer
@@ -40,8 +40,11 @@ public class TriggerSlider : MonoBehaviour
             DynamicBreathManager.instance.MoodChange(DynamicBreathManager.BreathMood.scared);
             // when we are seen play our audio
             if (audioSource)
-                if (!audioSource.isPlaying)
+                if (!audioSource.isPlaying && !played)
+                {
                     audioSource.Play();
+                    played = true;
+                }
         }
     }
 

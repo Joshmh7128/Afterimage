@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\AudioNaturalizer.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Button.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\RandomSpawner.cs" />
+    <Compile Include="Assets\Scripts\FlashlightController.cs" />
     <Compile Include="Assets\Scripts\SendUIMessage.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Activator.cs" />
     <Compile Include="Assets\Scripts\UIHandler.cs" />
