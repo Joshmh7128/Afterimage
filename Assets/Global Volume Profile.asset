@@ -465,8 +465,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 3
   spectralLut:
-    m_OverrideState: 0
-    m_Value: {fileID: 2800000, guid: 366833afedf29d044b966a5e99db7c25, type: 3}
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: a6c8c78d034908f49a29848ef9b65999, type: 3}
   intensity:
     m_OverrideState: 1
     m_Value: 1
