@@ -7,7 +7,7 @@ public class VolumeInterpolation : MonoBehaviour
 {
     Volume thisVol; // our volume
     [SerializeField] bool hasPlayer; // do we have the player?
-    [SerializeField] float lerpSpeed = 1;
+    [SerializeField] float lerpSpeed = 0.05f;
 
     private void Start()
     {

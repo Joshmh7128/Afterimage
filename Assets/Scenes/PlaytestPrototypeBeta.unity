@@ -1151,7 +1151,7 @@ Transform:
   - {fileID: 1814314271}
   - {fileID: 289381412}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &105660731
 PrefabInstance:
@@ -3121,7 +3121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340208237341466096, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0012245
+      value: -3.001233
       objectReference: {fileID: 0}
     - target: {fileID: 6436679979011063671, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_IsActive
@@ -6942,35 +6942,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4187466535761780586, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94361717
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4187466535761780586, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.33103877
+      value: 0.000050186216
       objectReference: {fileID: 0}
     - target: {fileID: 5919076502965168118, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96421343
+      value: 0.9852077
       objectReference: {fileID: 0}
     - target: {fileID: 5919076502965168118, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.26512727
+      value: 0.17136465
       objectReference: {fileID: 0}
     - target: {fileID: 6252839428593064560, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9540745
+      value: 0.92135763
       objectReference: {fileID: 0}
     - target: {fileID: 6252839428593064560, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.29956943
+      value: 0.38871592
       objectReference: {fileID: 0}
     - target: {fileID: 8559887627732323704, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9998075
+      value: 0.87752783
       objectReference: {fileID: 0}
     - target: {fileID: 8559887627732323704, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.019620413
+      value: -0.47952566
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -9531,92 +9531,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4157084328889375134, guid: 89e9488a44065af4194729044b148ded, type: 3}
   m_PrefabInstance: {fileID: 756459752}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &763015008
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 763015011}
-  - component: {fileID: 763015010}
-  - component: {fileID: 763015009}
-  - component: {fileID: 763015012}
-  m_Layer: 0
-  m_Name: Dark Zone Box Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &763015009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763015008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 0
-  priority: 0
-  blendDistance: 2
-  weight: 0
-  sharedProfile: {fileID: 11400000, guid: d2c41d3a9e454e64292f4972fa355dba, type: 2}
---- !u!65 &763015010
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763015008}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.5898514, y: 1, z: 9.973232}
-  m_Center: {x: -0.60060114, y: 0, z: 3.6992664}
---- !u!4 &763015011
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763015008}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.75, y: 0.59, z: -33.1}
-  m_LocalScale: {x: 4.5981, y: 6.0772605, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &763015012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763015008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9d6d6e1b9c8484fb094ce71ce068f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasPlayer: 0
-  lerpSpeed: 1
 --- !u!1001 &768682797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10204,7 +10118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803557355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.41, z: 61.071}
+  m_LocalPosition: {x: -0.64, y: 0.41, z: 64.452}
   m_LocalScale: {x: 3.865, y: 3.5706, z: 3.9763}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13211,7 +13125,7 @@ MonoBehaviour:
   FullHighlight: {fileID: 0}
   state: 0
   waitTime: 0
-  endTime: 1
+  endTime: 3
   message: They Cannot Hurt You
   onEnable: 0
 --- !u!1001 &918014342
@@ -16688,7 +16602,7 @@ MonoBehaviour:
   FullHighlight: {fileID: 0}
   state: 0
   waitTime: 0
-  endTime: 6
+  endTime: 8
   message: Press Right Click to Zoom
   onEnable: 0
 --- !u!1001 &1123745278
@@ -17439,7 +17353,7 @@ MonoBehaviour:
   FullHighlight: {fileID: 0}
   state: 0
   waitTime: 0
-  endTime: 1
+  endTime: 3
   message: Remain Calm
   onEnable: 0
 --- !u!1001 &1148528399
@@ -20795,7 +20709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340208237341466096, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0012255
+      value: -3.001234
       objectReference: {fileID: 0}
     - target: {fileID: 6436679979011063671, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_IsActive
@@ -36947,7 +36861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340208237341466096, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.001246
+      value: -3.0012546
       objectReference: {fileID: 0}
     - target: {fileID: 6436679979011063671, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_IsActive
