@@ -106,7 +106,9 @@ public class PlayerCameraController : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<PuzzleElement>().OnHover();
 
-                UIHandler.instance.Request(UIHandler.RequestType.lmb);
+                // only show a hint if we want to
+                if (hit.transform.gameObject.GetComponent<PuzzleElement>().showsHint)
+                    UIHandler.instance.Request(UIHandler.RequestType.lmb);
 
                 // if we are hovering and 
                 if (Input.GetMouseButtonDown(0))

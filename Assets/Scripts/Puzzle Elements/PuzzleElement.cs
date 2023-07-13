@@ -12,7 +12,7 @@ public abstract class PuzzleElement : MonoBehaviour
     internal virtual void Activate(States signal) { } // does this puzzle element have an activated state?
     internal virtual void OnHover() { isHovering = true; hoverTime = 1; }
 
-    public bool isHovering; // is the player hovering on us right now?
+    public bool isHovering, showsHint; // is the player hovering on us right now?
     public float hoverTime; // our hovertime
 
     [SerializeField] Renderer FullHighlight; // our full highlight interaction render
