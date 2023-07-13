@@ -3121,7 +3121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340208237341466096, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0011835
+      value: -3.0012245
       objectReference: {fileID: 0}
     - target: {fileID: 6436679979011063671, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_IsActive
@@ -3227,6 +3227,7 @@ MonoBehaviour:
   m_Script: {fileID: 1568855305}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &278946071
 Transform:
   m_ObjectHideFlags: 19
@@ -3310,6 +3311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -6940,35 +6942,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4187466535761780586, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94683176
+      value: 0.94361717
       objectReference: {fileID: 0}
     - target: {fileID: 4187466535761780586, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.3217292
+      value: -0.33103877
       objectReference: {fileID: 0}
     - target: {fileID: 5919076502965168118, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.79462403
+      value: 0.96421343
       objectReference: {fileID: 0}
     - target: {fileID: 5919076502965168118, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.60710186
+      value: 0.26512727
       objectReference: {fileID: 0}
     - target: {fileID: 6252839428593064560, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91676164
+      value: 0.9540745
       objectReference: {fileID: 0}
     - target: {fileID: 6252839428593064560, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.39943483
+      value: 0.29956943
       objectReference: {fileID: 0}
     - target: {fileID: 8559887627732323704, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.90866834
+      value: 0.9998075
       objectReference: {fileID: 0}
     - target: {fileID: 8559887627732323704, guid: 7e049ebabd6e3fe4bb3b159696a95773, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.4175187
+      value: -0.019620413
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -7886,6 +7888,7 @@ MonoBehaviour:
   m_Script: {fileID: 1520124999}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &639705657
 Transform:
   m_ObjectHideFlags: 19
@@ -9539,6 +9542,7 @@ GameObject:
   - component: {fileID: 763015011}
   - component: {fileID: 763015010}
   - component: {fileID: 763015009}
+  - component: {fileID: 763015012}
   m_Layer: 0
   m_Name: Dark Zone Box Volume
   m_TagString: Untagged
@@ -9561,7 +9565,7 @@ MonoBehaviour:
   m_IsGlobal: 0
   priority: 0
   blendDistance: 2
-  weight: 1
+  weight: 0
   sharedProfile: {fileID: 11400000, guid: d2c41d3a9e454e64292f4972fa355dba, type: 2}
 --- !u!65 &763015010
 BoxCollider:
@@ -9599,6 +9603,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &763015012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763015008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9d6d6e1b9c8484fb094ce71ce068f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasPlayer: 0
+  lerpSpeed: 1
 --- !u!1001 &768682797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10033,6 +10051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -10151,6 +10170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -10226,6 +10246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -10250,6 +10271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -13184,6 +13206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -14194,6 +14217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -16659,6 +16683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -17409,6 +17434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -18753,6 +18779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -20081,6 +20108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -20767,7 +20795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340208237341466096, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0011845
+      value: -3.0012255
       objectReference: {fileID: 0}
     - target: {fileID: 6436679979011063671, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_IsActive
@@ -22432,6 +22460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -24911,6 +24940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -28382,11 +28412,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
   waitTime: 0
-  endTime: 1
+  endTime: 0.2
   message: please
   onEnable: 0
 --- !u!1 &1794155505
@@ -28619,6 +28650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -28671,6 +28703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHovering: 0
+  showsHint: 0
   hoverTime: 0
   FullHighlight: {fileID: 0}
   state: 0
@@ -36914,7 +36947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6340208237341466096, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.001205
+      value: -3.001246
       objectReference: {fileID: 0}
     - target: {fileID: 6436679979011063671, guid: fd2ba8a9f702a5e4fb16088298df1c76, type: 3}
       propertyPath: m_IsActive

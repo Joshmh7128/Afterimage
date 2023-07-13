@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Transform.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Switch.cs" />
     <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Page.cs" />
+    <Compile Include="Assets\Scripts\VolumeInterpolation.cs" />
     <Compile Include="Assets\Scripts\DynamicBreathManager.cs" />
   </ItemGroup>
   <ItemGroup>
