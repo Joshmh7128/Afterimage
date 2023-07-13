@@ -14,7 +14,7 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] AudioClip zoomIn, zoomOut, clickIn, clickOut, flashlightOn, flashlightOff; // our noises
     bool lastClicked; // did we last click?
 
-    [SerializeField] Light flashlightObj;
+    public Light flashlightObj;
 
     float originalVol; // what was our original volume?
 

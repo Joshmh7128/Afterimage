@@ -7,20 +7,24 @@ public class CourtyardSetpieceManager : MonoBehaviour
     /// script exists to manage the courtyard setpiece
     /// 
 
-    [SerializeField] AudioSource corruption;
     [SerializeField] Animator animator;
+    bool started;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (!corruption.isPlaying) corruption.Play();
+            AnimationCheck();
         }
     }
 
-    void StartAnimation()
+    void AnimationCheck()
     {
-
+        if (!started && PlayerCameraController.instance.flashlightObj.isActiveAndEnabled)
+        {
+            started = true;
+            animator.Play("Flicker");
+        }
     }
 
 }

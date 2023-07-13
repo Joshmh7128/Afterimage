@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerCameraController.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\WindowRandomizer.cs" />
+    <Compile Include="Assets\Scripts\TriggerWall.cs" />
     <Compile Include="Assets\Scripts\Ghost Sliders\TriggerSlider.cs" />
     <Compile Include="Assets\Scripts\TransformSway.cs" />
     <Compile Include="Assets\Scripts\FramerateController.cs" />
