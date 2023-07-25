@@ -804,14 +804,14 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 4.467046
   compensation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: -0.75
   limitMin:
     m_OverrideState: 1
-    m_Value: -5
+    m_Value: 2.332173
   limitMax:
     m_OverrideState: 1
-    m_Value: 3.1295717
+    m_Value: 2.8330429
   curveMap:
     m_OverrideState: 0
     m_Value:
