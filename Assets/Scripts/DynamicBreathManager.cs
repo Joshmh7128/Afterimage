@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class DynamicBreathManager : MonoBehaviour
 {
-    [SerializeField] float breathSpeed, desiredBreathSpeed, breathLerpSpeed, breathVariance; // how fast are we breathing? this variable is set by MoodChange()
+    public static DynamicBreathManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    [SerializeField] float breathSpeed, desiredBreathSpeed, breathLerpSpeed, breathVariance, returnToNormSpeed, returnCount, returnCountMax; // how fast are we breathing? this variable is set by MoodChange()
     [SerializeField] List<AudioClip> breathInSounds, breathOutSounds;
     AudioClip lastInSound, lastOutSound; // what were our last in and our breath sounds
     [SerializeField] AudioSource breathSource;
@@ -26,16 +32,27 @@ public class DynamicBreathManager : MonoBehaviour
     }
 
     // call when we change our mood
-    void MoodChange(BreathMood desiredMood)
+    public void MoodChange(BreathMood desiredMood)
     {
         currentMood = desiredMood;
         breathMood = desiredMood;
         desiredBreathSpeed = breathSpeeds[(int)breathMood];
+        returnCount = returnCountMax;
     }
 
     private void FixedUpdate()
     {
+        // make sure we're on the right mood
         if (breathMood != currentMood) MoodChange(breathMood);
+
+        // check to see if we should go back to our normal mood
+        if (returnCount > 0)
+        returnCount -= returnToNormSpeed * Time.fixedDeltaTime;
+
+        if (returnCount <= 0)
+        {
+            MoodChange(BreathMood.normal);
+        }
 
         // lerp our breathspeed to our desired breath speed
         breathSpeed = Mathf.Lerp(desiredBreathSpeed, breathSpeed, breathLerpSpeed * Time.fixedDeltaTime);

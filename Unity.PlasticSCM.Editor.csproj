@@ -252,8 +252,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\UI\SortOrderComparer.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\Views\IncomingChanges\Developer\IncomingChangesTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\Views\Branch\BranchesTab.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\Views\IncomingChanges\DrawIncomingChangesOverview.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\Gluon\UpdateReport\UpdateReportDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\Views\IncomingChanges\DrawIncomingChangesOverview.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\Developer\GenericProgress.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\PlasticApp.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor\PlasticSCM\AssetMenu\AssetFilesFilterPatternsMenuBuilder.cs" />
@@ -627,6 +627,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>F:\Unity\Editors\2022.3.0f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>F:\Unity\Editors\2022.3.0f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>F:\Unity\Editors\2022.3.0f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>

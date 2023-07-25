@@ -65,9 +65,42 @@
     <Compile Include="Assets\Scripts\FramerateController.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\LightLayerChanger.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\AudioNaturalizer.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Button.cs" />
     <Compile Include="Assets\Kowloon Walled City\Scripts\RandomSpawner.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Activator.cs" />
+    <Compile Include="Assets\Scripts\UIHandler.cs" />
+    <Compile Include="Assets\Scripts\HoverTex.cs" />
+    <Compile Include="Assets\Scripts\InteractableHighlight.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Sound.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement.cs" />
     <Compile Include="Assets\Scripts\VisibleSlider.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Transform.cs" />
+    <Compile Include="Assets\Scripts\Puzzle Elements\PuzzleElement_Switch.cs" />
     <Compile Include="Assets\Scripts\DynamicBreathManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -642,6 +675,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{E2D58647-695E-3D8C-0B80-0E4B1737AE34}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualEffectGraph.Runtime.Player.csproj">
       <Project>{45B0AC2B-E822-6CFF-796A-775B723C6176}</Project>
       <Name>Unity.VisualEffectGraph.Runtime.Player</Name>
@@ -653,30 +690,6 @@
     <ProjectReference Include="Unity.AI.Navigation.Player.csproj">
       <Project>{AEE44788-53D9-A5E2-E1EF-64097022DD65}</Project>
       <Name>Unity.AI.Navigation.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{4125AA37-F9C2-CB49-429D-07685880782A}</Project>
-      <Name>Unity.VisualScripting.Flow.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.Player.csproj">
-      <Project>{F66AFE94-FCC9-E244-97D5-EF4E4FF0FCAB}</Project>
-      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
-      <Project>{6D7DA4D3-797E-3AA8-F919-32DD4856C871}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{B1410477-995D-80D8-75F6-9E750A3D828E}</Project>
-      <Name>Unity.TextMeshPro.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{E2D58647-695E-3D8C-0B80-0E4B1737AE34}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{E4A905F4-E175-8B3C-3814-7D47A067C5C8}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{0F0EB508-CA86-A0D8-4548-E5186E7D5A9D}</Project>
@@ -694,21 +707,29 @@
       <Project>{94A13643-5696-8108-4124-08D4E18819A9}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
-      <Project>{1DF859C7-795C-4684-2E38-8936B886CB08}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
+      <Project>{4125AA37-F9C2-CB49-429D-07685880782A}</Project>
+      <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
       <Project>{2777597A-1814-1F5C-9DF1-174CD7890773}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.Player.csproj">
+      <Project>{F66AFE94-FCC9-E244-97D5-EF4E4FF0FCAB}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
+      <Project>{6D7DA4D3-797E-3AA8-F919-32DD4856C871}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
       <Project>{37E8E315-E47B-9166-EAD6-244390DC3513}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
-      <Project>{7D272E16-93F1-EFDE-0959-59E784853248}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{B1410477-995D-80D8-75F6-9E750A3D828E}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{D2ED6CB7-8129-3FD7-F75A-0A7406168D2E}</Project>

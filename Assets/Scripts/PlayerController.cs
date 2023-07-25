@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+    public void Awake()
+    {
+        instance = this;
+    }
+
     // script handles movement of the player
-    [Header("Movement")]
-    Vector3 moveH, moveV, move;
-    [SerializeField] Transform playerHead;
+    [SerializeField] Vector3 moveH, moveV, move;
+    public Transform playerHead;
     [SerializeField] CharacterController characterController; // our character controller
     [SerializeField] float moveSpeed, gravity, jumpVelocity, playerJumpVelocity; // set in editor for controlling
     float gravityValue, verticalVelocity; // hidden because is calculated
@@ -27,8 +32,8 @@ public class PlayerController : MonoBehaviour
         // declare our motion
         float pAxisV = Input.GetAxisRaw("Vertical");
         float pAxisH = Input.GetAxisRaw("Horizontal");
-        moveV = (playerHead.forward * pAxisV).normalized;
-        moveH = (playerHead.right * pAxisH).normalized;
+        moveV = playerHead.forward * pAxisV;
+        moveH = playerHead.right * pAxisH;
 
         RaycastHit groundedHit;
         Physics.Raycast(transform.position, Vector3.down, out groundedHit, characterController.height/2, Physics.AllLayers, QueryTriggerInteraction.Ignore);
@@ -37,12 +42,13 @@ public class PlayerController : MonoBehaviour
         // jump calculations
         gravityValue = gravity;
 
-        if (groundedHit.transform == null)
+        // if we are NOT grounded
+        if (!characterController.isGrounded)
         {
             playerJumpVelocity += gravityValue * Time.fixedDeltaTime;
             landed = false;
-        }
-        else if (groundedHit.transform != null)
+        } // if we are gounded
+        else if (characterController.isGrounded)
         {
             // jumping
             if (Input.GetKeyDown(KeyCode.Space))

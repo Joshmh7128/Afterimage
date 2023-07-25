@@ -8,24 +8,46 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] float lerpSpeed, slerpSpeed; // our movement speed params
     [SerializeField] Transform head; // the head we move to
     [SerializeField] float normalFov, zoomFov, fovLerpInSpeed, fovLerpOutSpeed;
-    Camera cam;
+    Camera cam; RaycastHit hit;
+
+    public AudioSource camZoomNoise, flashlightNoise, vhsStaticNoise; // our zoome noise source
+    [SerializeField] AudioClip zoomIn, zoomOut, clickIn, clickOut, flashlightOn, flashlightOff; // our noises
+    bool lastClicked; // did we last click?
+
+    public Light flashlightObj;
+
+    float originalVol; // what was our original volume?
 
     public static PlayerCameraController instance;
 
     private void Awake()
     {
+        // stop the audio source from playing audio on the camera on start
+        originalVol = camZoomNoise.volume;
+        camZoomNoise.volume = 0;
         instance = this;
     }
 
     private void Start()
     {
         cam = GetComponent<Camera>();
+        // invoke the late start
+        Invoke("LateStart",0.1f);
+    }
+
+    // late start runs 0.1 seconds after start
+    void LateStart()
+    {
+        // do this in the late start so we dont have the audio source play on start
+        camZoomNoise.volume = originalVol;
     }
 
     private void Update()
     {
         TransformUpdate();
         ProcessFov();
+        ProcessPuzzleInput();
+        ProcessFlashlightInput();
     }
 
     void TransformUpdate()
@@ -40,11 +62,75 @@ public class PlayerCameraController : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, zoomFov, fovLerpInSpeed * Time.fixedDeltaTime);
+            cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, zoomFov, fovLerpInSpeed * Time.fixedDeltaTime);
         }
         else
         {
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, normalFov, fovLerpOutSpeed * Time.fixedDeltaTime);
+            cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, normalFov, fovLerpOutSpeed * Time.fixedDeltaTime);
+        }
+
+        if (cam.fieldOfView == zoomFov && !lastClicked)
+        {
+            lastClicked = true;
+            camZoomNoise.Stop();
+            camZoomNoise.PlayOneShot(clickIn);
+        }
+
+        if (cam.fieldOfView == normalFov && !lastClicked)
+        {
+            lastClicked = true;
+            camZoomNoise.Stop();
+            camZoomNoise.PlayOneShot(clickOut);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            lastClicked = false;
+            camZoomNoise.clip = zoomIn; 
+            camZoomNoise.Play();
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            lastClicked = false;
+            camZoomNoise.clip = zoomOut; 
+            camZoomNoise.Play();
         }
     }
+
+    void ProcessPuzzleInput()
+    {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 1f, Physics.AllLayers, QueryTriggerInteraction.Collide))
+        {
+            if (hit.transform.gameObject.GetComponent<PuzzleElement>() != null)
+            {
+                hit.transform.gameObject.GetComponent<PuzzleElement>().OnHover();
+
+                // only show a hint if we want to
+                if (hit.transform.gameObject.GetComponent<PuzzleElement>().showsHint)
+                    UIHandler.instance.Request(UIHandler.RequestType.lmb);
+
+                // if we are hovering and 
+                if (Input.GetMouseButtonDown(0))
+                {
+                    hit.transform.gameObject.GetComponent<PuzzleElement>().Interact();
+                }
+            }
+            else { UIHandler.instance.Request(UIHandler.RequestType.none); }
+        }
+
+
+
+    }
+
+    void ProcessFlashlightInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            flashlightObj.enabled = (!flashlightObj.enabled);
+            AudioClip clip = flashlightObj.enabled ? flashlightOn : flashlightOff;
+            flashlightNoise.PlayOneShot(clip);
+        }
+    }
+    
 }
