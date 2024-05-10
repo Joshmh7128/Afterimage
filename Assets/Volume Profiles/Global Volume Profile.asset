@@ -550,13 +550,13 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.27
   directLightingStrength:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.156
   radius:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.81
   spatialBilateralAggressiveness:
     m_OverrideState: 0
     m_Value: 0.117
@@ -678,16 +678,16 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 5.37
+    m_Value: 1.2
   multiplier:
     m_OverrideState: 0
     m_Value: 1
   upperHemisphereLuxValue:
     m_OverrideState: 1
-    m_Value: 0.13233426
+    m_Value: 1.265209
   upperHemisphereLuxColor:
     m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.34814444, z: 0.28605428}
+    m_Value: {x: 0.37304506, y: 0.42242035, z: 0.5}
   desiredLuxValue:
     m_OverrideState: 0
     m_Value: 20000
@@ -702,10 +702,10 @@ MonoBehaviour:
     m_Value: 0
   hdriSky:
     m_OverrideState: 1
-    m_Value: {fileID: 8900000, guid: f4dae4333f5d50d429c0ffe6a21b36ff, type: 3}
+    m_Value: {fileID: 8900000, guid: 8d085967ce724c94c92cced3fa1c7ba6, type: 3}
   distortionMode:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   flowmap:
     m_OverrideState: 0
     m_Value: {fileID: 0}
