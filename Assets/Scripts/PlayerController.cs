@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
         move = new Vector3((moveH.x + moveV.x), verticalVelocity / moveSpeed, (moveH.z + moveV.z));
         // adjust it to our slope
         move = AdjustVelocityToSlope(move);
+        // clamp our movement
+        move = Vector3.ClampMagnitude(move, 1);
+
         // apply the movement
         characterController.Move(move * Time.fixedDeltaTime * moveSpeed);
 
